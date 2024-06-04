@@ -1,5 +1,7 @@
 <?php
 
+defined( 'ABSPATH' ) || die( 'File cannot be accessed directly' );
+
 add_filter(
 	'pre_option_upload_path',
 	function ( $upload_path ) {
@@ -10,6 +12,6 @@ add_filter(
 add_filter(
 	'pre_option_upload_url_path',
 	function ( $upload_url_path ) {
-		return '//evolutionaryhumandesign.com/wp-content/uploads/';
+		return '//theapiguys.com/wp-content/uploads/';
 	}
 );
