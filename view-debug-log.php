@@ -51,16 +51,23 @@ function vdl_display_debug_log()
     // Path to the debug.log file
     $debug_log_path = WP_CONTENT_DIR . '/debug.log';
 
+    echo '<style>pre {white-space:pre-wrap;padding:1rem;border:3px solid white;background:aliceblue;}li{margin-left:2rem;}</style>';
     echo '<div class="wrap">';
     echo '<h1>Debug Log</h1>';
+
+    echo '<h2>esc_html($log_contents)</h2>';
+    echo '<ul>';
+    echo '<li>WP_DEBUG = <strong>' . ( WP_DEBUG ? 'true' : 'false' ) . '</strong></li>';
+    echo '<li>WP_DEBUG_LOG = <strong>' . ( WP_DEBUG_LOG ? 'true' : 'false' ) . '</strong></li>';
+    echo '<li>WP_DEBUG_DISPLAY = <strong>' . ( WP_DEBUG_DISPLAY ? 'true' : 'false' ) . '</strong></li>';
+    echo '</ul>';
 
     // Check if the file exists
     if (file_exists($debug_log_path)) {
         // Read the file contents
         $log_contents = explode("\n", file_get_contents($debug_log_path));
 
-        echo '<h2>esc_html($log_contents)</h2>';
-        echo '<pre style="white-space:pre-wrap;padding:1rem;border:3px solid white;background:aliceblue;">' . esc_html(print_r($log_contents, true)) . '</pre>';
+        echo '<pre>' . esc_html(print_r($log_contents, true)) . '</pre>';
     } else {
         echo '<p>Debug log file not found.</p>';
     }
