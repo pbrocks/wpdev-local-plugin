@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: View Debug Log
- * Description: A simple plugin to view the debug.log file from the WordPress admin.
+ * Plugin Name: Local WPDev
+ * Description: Image URLs from production and View Debug Log from the WordPress admin.
  * Version: 1.0
  * Author: pbrocks
  */
