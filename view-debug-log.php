@@ -8,7 +8,7 @@
 
 defined( 'ABSPATH' ) || die( 'File cannot be accessed directly' );
 
-// require __DIR__ . '/local-image-filters.php';
+require __DIR__ . '/local-image-filters.php';
 
 if ( ! function_exists( 'write_to_log' ) ) {
 	function write_to_log( $log ) {
