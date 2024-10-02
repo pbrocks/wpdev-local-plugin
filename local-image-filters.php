@@ -12,6 +12,7 @@ add_filter(
 add_filter(
 	'pre_option_upload_url_path',
 	function ( $upload_url_path ) {
-		return '//theapiguys.com/wp-content/uploads/';
+		return '//dahawellness.com/wp-content/uploads/';
 	}
 );
+
